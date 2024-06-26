@@ -24,7 +24,18 @@ namespace Ayuda_para_la_T3_Moanso
             string baseDatos = comboBox1.Text;
             CapaDatos.Conexion.Instancia.ser = servidor;
             CapaDatos.Conexion.Instancia.bd = baseDatos;
-            label3.Text = "se conecto correctamente";
+        }
+
+        private void moveramancli_Click(object sender, EventArgs e)
+        {
+            Form3  fora = new Form3();
+            fora.Show();
+        }
+
+        private void moveramanhabi_Click(object sender, EventArgs e)
+        {
+            Form2 foras = new Form2();
+            foras.Show();
         }
     }
 }
