@@ -66,11 +66,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ManCliente.resx">
-      <DependentUpon>ManCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManHabitacion.resx">
-      <DependentUpon>ManHabitacion.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

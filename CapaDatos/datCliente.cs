@@ -46,7 +46,7 @@ namespace CapaDatos
                     entCliente Cli = new entCliente();
                     Cli.IDCliente = Convert.ToInt32(dr["IDCliente"]);
                     Cli.Nombres = dr["Nombres"].ToString();
-                    Cli.DNI = Convert.ToInt32(dr["DNI"]);;
+                    Cli.DNI = Convert.ToInt32(dr["DNI"]);
                     lista.Add(Cli);
                 }
 
