@@ -51,6 +51,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(419, 268);
             this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dni
             // 
@@ -101,6 +102,7 @@
             this.AGREGAR.TabIndex = 24;
             this.AGREGAR.Text = "Agregar";
             this.AGREGAR.UseVisualStyleBackColor = true;
+            this.AGREGAR.Click += new System.EventHandler(this.AGREGAR_Click);
             // 
             // ID_cliente
             // 
