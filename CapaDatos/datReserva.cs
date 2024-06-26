@@ -93,6 +93,7 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
+
          #endregion metodos
     }
 }

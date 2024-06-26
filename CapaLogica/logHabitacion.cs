@@ -28,6 +28,12 @@ namespace CapaLogica
             datHabitacion.Instancia.InsertarHabitacion(Cli);
         }
 
+        //EDITAR
+        public void EditarHabitacion(entHabitacion Cli)
+        {
+            datHabitacion.Instancia.EditarHabitacion(Cli);
+        }
+
         #endregion singleton
 
         #region metodos
