@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    internal class entReserva
+    public class entReserva
     {
+        public int IDReserva { get; set; }
+        public DateTime Fecha { get; set; }
+        public double Costo { get; set; }
+        public string Estado { get; set; }
+        public int IDCliente { get; set; }
+        public int Numero { get; set; }
     }
 }
