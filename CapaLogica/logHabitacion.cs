@@ -34,6 +34,12 @@ namespace CapaLogica
             datHabitacion.Instancia.EditarHabitacion(Cli);
         }
 
+        //DESHABILITAR
+        public void DeshabilitarHabitacion(entHabitacion Cli)
+        {
+            datHabitacion.Instancia.DeshabilitarHabitacion(Cli);
+        }
+
         #endregion singleton
 
         #region metodos

@@ -117,6 +117,33 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return edita;
         }
+        ///////////////////////// Deshabilitando Cliente
+
+        public Boolean DeshabilitarHabitacion(entHabitacion Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDeshabilitarHabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDHabitacion", Cli.IDHabitacion);
+                //cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
         #endregion metodos
     }
 }

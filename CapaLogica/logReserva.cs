@@ -28,6 +28,12 @@ namespace CapaLogica
             datReserva.Instancia.InsertarReserva(Cli);
         }
 
+        //DESHABILITAR
+        public void DeshabilitarReserva(entReserva Cli)
+        {
+            datReserva.Instancia.DeshabilitarReserva(Cli);
+        }
+
         #endregion singleton
 
         #region metodos
