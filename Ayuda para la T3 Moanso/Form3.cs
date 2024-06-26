@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidad;
 using CapaLogica;
+using CapaDatos;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ayuda_para_la_T3_Moanso
 {
@@ -35,12 +39,22 @@ namespace Ayuda_para_la_T3_Moanso
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void AGREGAR_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                entCliente c = new entCliente();
+                c.Nombres = nombre.Text.Trim();
+                c.DNI = int.Parse(dni.Text.Trim());
+                logCliente.Instancia.InsertarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            listar();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
