@@ -19,12 +19,12 @@ namespace Ayuda_para_la_T3_Moanso
         public Form1()
         {
             InitializeComponent();
-            listar();
+            
         }
         public void listar()
         {
 
-            dataGridView1.DataSource = logr;
+            dataGridView1.DataSource = logReserva.Instancia.ListarReserva();
         }
 
         private void conectar_Click(object sender, EventArgs e)
@@ -49,7 +49,28 @@ namespace Ayuda_para_la_T3_Moanso
 
         private void button1_Click(object sender, EventArgs e)
         {
+            {
+                try
+                {
+                    entReserva r = new entReserva();
+                    r.Fecha = Convert.ToDateTime(dateTimePicker1.Value);
+                    r.Costo = Convert.ToDouble(textBox2.Text.Trim());
+                    r.Estado = textBox3.Text.Trim();
+                    r.IDCliente = Convert.ToInt32(textBox1.Text.Trim());
+                    r.Numero = Convert.ToInt32(comboBox3.Text.Trim());
+                    logReserva.Instancia.InsertarReserva(r);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error.." + ex);
+                }
+                listar();
+            }
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listar();
         }
     }
 }

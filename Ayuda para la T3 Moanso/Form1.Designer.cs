@@ -51,12 +51,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -89,7 +91,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "T3_Moanso"});
+            "105"});
             this.comboBox3.Location = new System.Drawing.Point(12, 531);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(100, 33);
@@ -280,6 +282,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "base de datos";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(240, 531);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 42);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "listar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +332,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button3;
     }
 }
 
