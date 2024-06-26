@@ -49,7 +49,7 @@ namespace CapaDatos
                     Cli.Costo = Convert.ToDouble(dr["Costo"]);
                     Cli.Estado = Convert.ToString(dr["Estado"]);
                     Cli.IDCliente = Convert.ToInt32(dr["IDCliente"]);
-                    Cli.Numero = Convert.ToInt32(dr["Numero"]);
+                    Cli.IDhabitacion = Convert.ToInt32(dr["IDHabitacion"]);
                     lista.Add(Cli);
                 }
 
@@ -72,7 +72,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spAgregarReserva", cn);
+                cmd = new SqlCommand("AgregarReserva", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Fecha", Cli.Fecha);
                 cmd.Parameters.AddWithValue("@Costo", Cli.Costo);

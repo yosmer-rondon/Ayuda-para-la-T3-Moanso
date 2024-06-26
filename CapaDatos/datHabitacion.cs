@@ -144,6 +144,36 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
+
+        public List<entHabitacion> numeroshabitacion()
+        {
+            SqlCommand cmd = null;
+            List<entHabitacion> lista = new List<entHabitacion>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("numerohabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entHabitacion Cli = new entHabitacion();
+                    Cli.Numero = Convert.ToInt32(dr["Numero"]);
+                    lista.Add(Cli);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
         #endregion metodos
     }
 }

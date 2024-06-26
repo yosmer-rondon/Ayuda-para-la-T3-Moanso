@@ -14,5 +14,6 @@ namespace CapaEntidad
         public string Estado { get; set; }
         public int IDCliente { get; set; }
         public int Numero { get; set; }
+        public int IDhabitacion { get; set; }
     }
 }

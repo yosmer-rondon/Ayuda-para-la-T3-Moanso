@@ -39,7 +39,10 @@ namespace CapaLogica
         {
             datHabitacion.Instancia.DeshabilitarHabitacion(Cli);
         }
-
+        public List<entHabitacion> ObtenerNumerosHabitacion()
+        {
+            return datHabitacion.Instancia.numeroshabitacion();
+        }
         #endregion singleton
 
         #region metodos
