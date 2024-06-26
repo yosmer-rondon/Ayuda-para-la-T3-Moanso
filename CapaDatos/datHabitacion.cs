@@ -62,6 +62,33 @@ namespace CapaDatos
             }
             return lista;
         }
+        /////////////////////////Insertando Habitacion
+        public Boolean InsertarHabitacion(entHabitacion Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertarHabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Numero", Cli.Numero);
+                cmd.Parameters.AddWithValue("@Precio", Cli.Precio);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return inserta;
+        }
         #endregion metodos
     }
 }

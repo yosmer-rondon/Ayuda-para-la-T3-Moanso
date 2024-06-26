@@ -23,6 +23,11 @@ namespace CapaLogica
             }
         }
 
+        public void InsertarReserva(entReserva Cli)
+        {
+            datReserva.Instancia.InsertarReserva(Cli);
+        }
+
         #endregion singleton
 
         #region metodos

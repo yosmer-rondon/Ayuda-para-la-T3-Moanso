@@ -64,6 +64,35 @@ namespace CapaDatos
             }
             return lista;
         }
-        #endregion metodos
+        /////////////////////////Insertando Habitacion
+        public Boolean InsertarReserva(entReserva Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spAgregarReserva", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Fecha", Cli.Fecha);
+                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.IDCliente);
+                cmd.Parameters.AddWithValue("@Numero", Cli.Numero);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return inserta;
+        }
+         #endregion metodos
     }
 }

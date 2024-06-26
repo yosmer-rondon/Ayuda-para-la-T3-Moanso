@@ -23,6 +23,11 @@ namespace CapaLogica
             }
         }
 
+        public void InsertarHabitacion(entHabitacion Cli)
+        {
+            datHabitacion.Instancia.InsertarHabitacion(Cli);
+        }
+
         #endregion singleton
 
         #region metodos
