@@ -29,7 +29,7 @@ namespace CapaDatos
         #region metodos
 
 
-        ////////////////////listado de Clientes
+        ////////////////////listado de habitaciones
         public List<entHabitacion> ListarHabitacion()
         {
             SqlCommand cmd = null;

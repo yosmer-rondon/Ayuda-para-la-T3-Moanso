@@ -13,13 +13,13 @@ namespace CapaLogica
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        private static readonly logHabitacion _instancia = new logCliente();
+        private static readonly logHabitacion _instancia = new logHabitacion();
         //privado para evitar la instanciación directa
-        public static logCliente Instancia
+        public static logHabitacion Instancia
         {
             get
             {
-                return logCliente._instancia;
+                return logHabitacion._instancia;
             }
         }
 
@@ -29,9 +29,9 @@ namespace CapaLogica
 
         ///listado
 
-        public List<entCliente> ListarCliente()
+        public List<entHabitacion> ListarHabitacion()
         {
-            return datCliente.Instancia.ListarCliente();
+            return datHabitacion.Instancia.ListarHabitacion();
         }
 
         #endregion metodos
