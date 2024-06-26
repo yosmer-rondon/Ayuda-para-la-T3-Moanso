@@ -8,6 +8,9 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogica;
+using CapaDatos;
+using CapaEntidad;
 
 namespace Ayuda_para_la_T3_Moanso
 {
@@ -16,6 +19,12 @@ namespace Ayuda_para_la_T3_Moanso
         public Form1()
         {
             InitializeComponent();
+            listar();
+        }
+        public void listar()
+        {
+
+            dataGridView1.DataSource = logr;
         }
 
         private void conectar_Click(object sender, EventArgs e)
@@ -36,6 +45,11 @@ namespace Ayuda_para_la_T3_Moanso
         {
             Form2 foras = new Form2();
             foras.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
