@@ -101,5 +101,10 @@ namespace Ayuda_para_la_T3_Moanso
                 MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

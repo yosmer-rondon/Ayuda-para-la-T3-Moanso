@@ -43,5 +43,10 @@ namespace Ayuda_para_la_T3_Moanso
                 listar();
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

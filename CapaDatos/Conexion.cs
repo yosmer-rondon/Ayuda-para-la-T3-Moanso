@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public class Conexion
     {
-        public string ser = "DESKTOP-NM28KG4\\MSSQLSERVER01";
+        public string ser = "DESKTOP-MSSFJKR\\SQLEXPRESS";
         public string bd = "T3_Moanso";
         //patron de Diseño Singleton
         private static readonly Conexion _instancia = new Conexion();
