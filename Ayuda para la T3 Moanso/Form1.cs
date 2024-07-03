@@ -19,6 +19,7 @@ namespace Ayuda_para_la_T3_Moanso
         public Form1()
         {
             InitializeComponent();
+            
             LlenarComboBoxHabitaciones();
 
         }
@@ -26,6 +27,7 @@ namespace Ayuda_para_la_T3_Moanso
         {
 
             dataGridView1.DataSource = logReserva.Instancia.ListarReserva();
+            dataGridView1.Columns["Numero"].Visible = false;
         }
 
         private void conectar_Click(object sender, EventArgs e)
